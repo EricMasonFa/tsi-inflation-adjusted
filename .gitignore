@@ -5,7 +5,6 @@ node_modules
 dist
 .cache
 .idea
-doc
 
 # Logs
 logs
