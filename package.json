@@ -1,0 +1,22 @@
+{
+  "name": "tehran_stock_index_inflation_adjusted",
+  "version": "1.0.0",
+  "description": "Tehran stock index - Inflation adjusted",
+  "keywords": [
+    "Stock, Inflation, Iran"
+  ],
+  "license": "MIT",
+  "author": "Eric Mason",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "lightweight-charts": "^3.0.1"
+  }
+}
