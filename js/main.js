@@ -1,7 +1,7 @@
 import { createChart } from 'lightweight-charts';
 import { PriceScaleMode, CrosshairMode } from 'lightweight-charts'
-import './cpi-values'
-import './stock-index-values'
+import { cpi } from "./cpi-values";
+import { index } from "./stock-index-values"
 
 const chart = createChart(document.body, {
   width: 600,
@@ -51,10 +51,6 @@ const lineSeries = chart.addLineSeries({
   color: 'rgba(38, 198, 218, 1)',
   lineWidth: 3,
 });
-
-for (let i = 0; i < index.length; i++) {
-  index[i].time = index[i].t
-}
 
 let inflationAdjusted = [];
 
@@ -130,7 +126,7 @@ function pad(n) {
 
 function getIndexValue(ctime) {
   for (let i = 0; i < index.length; i++) {
-    let sTime =  index[i].t
+    let sTime =  index[i].time
     if (sTime === ctime) {
       return index[i].value
     }
